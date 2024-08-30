@@ -43,7 +43,7 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "parser": "eslint-parser"
     },
     "rules": {}
   },

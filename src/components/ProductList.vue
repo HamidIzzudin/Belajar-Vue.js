@@ -27,12 +27,12 @@
 </template>
 
 <script>
-import Price from "./Price.vue";
+import PriceComponent from "./Price.vue";
 
 export default {
     name: "product-list",
     components: {
-        Price
+        PriceComponent
     },
     props: ["products", "maximum"],
     computed: {
