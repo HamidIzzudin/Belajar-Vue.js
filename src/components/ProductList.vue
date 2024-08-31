@@ -16,9 +16,9 @@
                     <h2 class="text-info">{{ item.name }}</h2>
                     <p class="mb-0">{{item.description}}</p>
                     <div class="h5 float-right">
-                        <price 
+                        <price-component 
                             :value="Number(item.price)">
-                        </price>
+                        </price-component>
                     </div> 
                     <hr>
                 </div>

@@ -4,12 +4,13 @@
 
 <script>
 export default {
+    name: "price-component",
     props:{
         value: Number,
         prefix: {
             type: String,
             default: 'Rp'
-        },
+        },  
         precision: {
             type: Number,
             default:2
