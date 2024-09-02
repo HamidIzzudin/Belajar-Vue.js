@@ -1,12 +1,14 @@
 <template>
   <div id="app" class="container mt-5">
     <h1>IDShop</h1>
+    <price-slider :sliderStatus="sliderStatus" :maximum.sync="maximum"></price-slider>
     <product-list :products="products" :maximum="maximum" @add="addItem"></product-list>
   </div>
 </template>
 
-<script>
+<script> 
 // import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import PriceSlider from "./components/PriceSlider.vue";
 import ProductList from "./components/ProductList.vue";
 
 export default {
@@ -15,19 +17,21 @@ export default {
     return {
       maximum: 20,
       products:[],
-      cart: []
+      cart: [],
+      sliderStatus: true
     }
   },
   components: {
-    // FontAwesomeIcon
+    // FontAwesomeIcon,
+    PriceSlider,
     ProductList
   },
   mounted: function(){
-        fetch('https://hplussport.com/api/products/order/price')
-        .then( response => response.json())
-        .then(data => {
-            this.products = data;
-        });
+    fetch('https://hplussport.com/api/products/order/price')
+    .then( response => response.json())
+    .then(data => {
+        this.products = data;
+    });
   },
   methods: {
     addItem: function(product) {
