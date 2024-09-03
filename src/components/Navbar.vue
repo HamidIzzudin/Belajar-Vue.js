@@ -42,7 +42,7 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import Price from "./Price.vue";
 export default {
-     name:"navbar",
+     name:"navbar-component",
      components: {
         FontAwesomeIcon,
         Price
